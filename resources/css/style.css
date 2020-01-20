@@ -3,3 +3,106 @@
   padding: 0;
   box-sizing: border-box;
 }
+
+html {
+  font-size: 16px;
+  font-family: "Quicksand", Arial, Helvetica, sans-serif;
+}
+
+body {
+  width: 100%;
+  height: auto;
+}
+
+/*--- Header ---*/
+header {
+  position: fixed;
+  top: 0;
+  display: flex;
+  z-index: 1;
+  justify-content: space-between;
+  align-items: center;
+  height: 64px;
+  width: 100%;
+  padding: 0px 24px;
+  background-color: white;
+  border: 1px solid red;
+}
+
+/*Logo*/
+.logo {
+  display: flex;
+  align-items: center;
+  /*  border: 1px solid blue;*/
+}
+
+.logo-name {
+  text-transform: uppercase;
+  /* border: 1px solid purple; */
+}
+
+.colmar {
+  font-size: 20px;
+  font-weight: bolder;
+}
+
+.academy {
+  font-size: 20px;
+  font-weight: lighter;
+  color: rgb(153, 153, 153);
+}
+
+/*Navigation*/
+.navigation {
+  border: 1px solid green;
+}
+
+nav li {
+  list-style: none;
+  display: inline-block;
+  margin-left: 16px;
+}
+
+nav li a {
+  text-decoration: none;
+  color: black;
+}
+
+/*--- Main ---*/
+main {
+  margin-top: 64px;
+}
+
+/*Banner*/
+.banner {
+  display: flex;
+  width: 100%;
+  height: auto;
+  padding: 32px 24px;
+}
+
+.banner-image-container {
+  flex: 1;
+  width: 60%;
+  height: 640px;
+  margin-right: 24px;
+  border: 1px solid purple;
+}
+
+.banner img {
+  max-height: 100%;
+  width: auto;
+}
+
+.banner-text-container {
+  display: flex;
+  flex: 1;
+  flex-flow: column;
+  align-items: center;
+  justify-content: center;
+  width: 40%;
+  border: 1px solid green;
+  margin: 0px auto;
+}
+
+/*--- Footer ---*/
