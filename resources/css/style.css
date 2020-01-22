@@ -16,51 +16,54 @@ body {
 
 /*--- Header ---*/
 header {
+  /* border: 1px solid red; */
   position: fixed;
   top: 0;
   display: flex;
   z-index: 1;
   justify-content: space-between;
   align-items: center;
-  height: 64px;
+  height: 4rem;
   width: 100%;
-  padding: 0px 24px;
+  padding: 0rem 1.5rem;
   background-color: white;
-  border: 1px solid red;
+  box-shadow: 1px 0px 6px rgb(155, 155, 155);
 }
 
 /*Logo*/
 .logo {
+  /*  border: 1px solid blue;*/
   display: flex;
   align-items: center;
-  /*  border: 1px solid blue;*/
 }
 
 .logo-name {
-  text-transform: uppercase;
   /* border: 1px solid purple; */
+  text-transform: uppercase;
 }
 
 .colmar {
-  font-size: 20px;
+  font-family: "Work Sans";
+  font-size: 1.25rem;
   font-weight: bolder;
 }
 
 .academy {
-  font-size: 20px;
+  font-family: "Work Sans";
+  font-size: 1.25rem;
   font-weight: lighter;
   color: rgb(153, 153, 153);
 }
 
 /*Navigation*/
 .navigation {
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
 
 nav li {
   list-style: none;
   display: inline-block;
-  margin-left: 16px;
+  margin-left: 1rem;
 }
 
 nav li a {
@@ -70,39 +73,137 @@ nav li a {
 
 /*--- Main ---*/
 main {
-  margin-top: 64px;
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 30% 30% 40%;
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    "banner-image-cnt banner-image-cnt banner-text-cnt"
+    "main-article main-article side-articles";
 }
 
 /*Banner*/
-.banner {
+.banner-image-cnt {
+  /* border: 1px solid purple; */
+  grid-area: banner-image-cnt;
+  background-color: rgb(194, 194, 194);
+  padding: 2rem 1.5rem;
+}
+
+.banner-image-cnt img {
+  max-width: 100%;
+  height: auto;
+}
+
+.banner-text-cnt {
+  /* border: 1px solid green; */
+  grid-area: banner-text-cnt;
+  display: flex;
+  flex-flow: column;
+  align-items: left;
+  justify-content: center;
+  padding-right: 3.75rem;
+  padding-left: 1.5rem;
+  background-color: rgb(194, 194, 194);
+}
+
+.banner-text-cnt h1,
+p {
+  margin-bottom: 1.25rem;
+}
+
+.banner-text-cnt h1 {
+  font-family: "Work Sans";
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.banner-text-cnt p {
+  font-size: 1.8rem;
+  font-weight: bold;
+  font-family: "Work Sans" Arial, Helvetica, sans-serif;
+}
+
+.start-btn {
+  font-size: 1.25rem;
+  color: white;
+  height: 50x;
+  width: 380px;
+  padding: 0.5rem 0px;
+  font-family: "Work Sans" Arial, Helvetica, sans-serif;
+  background-color: rgb(50, 50, 50);
+  border: 1px solid rgb(50, 50, 50);
+  border-radius: 2px;
+  cursor: pointer;
+}
+
+/*Articles*/
+.main-article {
+  grid-area: main-article;
+  padding: 2rem 1.5rem;
+}
+
+.main-article img {
+  max-width: 100%;
+  height: auto;
+}
+
+.main-article h2 {
+  font-family: "Work Sans";
+  margin: 1.25rem 0rem;
+}
+
+.main-article .quote-author {
+  margin-top: 2rem;
+  margin-bottom: 0rem;
+  font-size: 0.75rem;
+}
+
+/*Side Articles*/
+.side-articles {
+  grid-area: side-articles;
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  padding-left: 1.5rem;
+  padding-top: 1rem;
+  padding-bottom: 3rem;
+}
+
+.side-articles h4,
+p {
+  margin-bottom: 0.5rem;
+}
+
+.side-articles h4 {
+  font-size: 1.4rem;
+}
+
+.article-1,
+.article-2,
+.article-3 {
+  /* border: 1px solid green; */
+  flex: 1;
   display: flex;
   width: 100%;
   height: auto;
-  padding: 32px 24px;
 }
 
-.banner-image-container {
-  flex: 1;
-  width: 60%;
-  height: 640px;
-  margin-right: 24px;
-  border: 1px solid purple;
+.side-articles .thumbnail-img {
+  /* border: 1px solid blue; */
+  max-width: 35%;
+  height: auto;
+  padding: 1rem 1rem;
 }
 
-.banner img {
-  max-height: 100%;
-  width: auto;
-}
-
-.banner-text-container {
+.article-1-txt,
+.article-2-txt,
+.article-3-txt {
+  /* border: 1px solid purple; */
   display: flex;
-  flex: 1;
   flex-flow: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
-  width: 40%;
-  border: 1px solid green;
-  margin: 0px auto;
 }
 
-/*--- Footer ---*/
+.article-1 /*Thesis'*/ /*--- Footer ---*/ ;;
