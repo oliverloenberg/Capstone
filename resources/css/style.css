@@ -146,7 +146,7 @@ p {
   height: 50x;
   width: 380px;
   padding: 0.5rem 0px;
-  margin-top: 1rem;
+  margin: 1rem 0rem;
   font-family: "Work Sans" Arial, Helvetica, sans-serif;
   background-color: rgb(50, 50, 50);
   border: 1px solid rgb(50, 50, 50);
@@ -194,8 +194,8 @@ p {
   flex-flow: column;
   justify-content: space-between;
   /* height: 85%; */
-  padding-left: 1.5rem;
-  padding-top: 2rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
   padding-bottom: 2rem;
 }
 
@@ -218,7 +218,8 @@ p {
   height: auto;
 }
 
-.side-articles a {
+.side-articles a,
+.side-thesis a {
   color: rgb(24, 34, 167);
   text-decoration: none;
   border-bottom: 1.2px solid rgb(24, 34, 167);
@@ -246,7 +247,7 @@ p {
   flex: 1;
   max-width: 35%;
   max-height: auto;
-  padding: 0rem 1rem 1rem 0rem;
+  padding: 1rem 1rem;
 }
 
 .thumbnail-container img {
@@ -307,6 +308,16 @@ p {
   background-color: white;
 }
 
+.course-1:hover,
+.course-2:hover,
+.course-3:hover,
+.course-4:hover,
+.course-5:hover,
+.course-6:hover {
+  box-shadow: 0px 10px 15px rgba(0, 0, 0, 0.25);
+  transition: box-shadow 0.2s ease-out 0.1s;
+}
+
 .course-txt {
   margin-left: 1rem;
   margin-bottom: 1.5rem;
@@ -319,6 +330,11 @@ p {
 
 .course-txt p {
   margin-top: 1rem;
+}
+
+.course-txt a {
+  text-decoration: none;
+  color: rgb(30, 30, 255);
 }
 
 .course-txt .uppercase {
@@ -373,7 +389,9 @@ p {
 .side-thesis {
   /* border: 2px solid blue; */
   grid-area: side-thesis;
-  padding-top: 2rem;
+  padding-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 2rem;
 }
 
 .side-thesis h4,
@@ -389,8 +407,11 @@ p {
 footer {
   display: flex;
   flex-flow: row;
+  align-items: center;
   justify-content: space-between;
-  margin: 1rem 1.5rem 2rem 1.5rem;
+  padding: 1rem 1.5rem 1rem 1.5rem;
+  border-top: 1px solid rgb(220, 220, 220);
+  box-shadow: 0px -1px 5px rgba(0, 0, 0, 0.15);
 }
 
 footer a {
@@ -399,16 +420,16 @@ footer a {
 }
 
 footer .footer-rights {
-  border: 1px solid green;
-  flex: 8;
+  /* border: 1px solid green; */
+  flex: 15;
 }
 
 footer .footer-terms {
-  border: 1px solid blue;
+  /* border: 1px solid blue; */
   flex: 1;
 }
 
 footer .footer-privacy {
-  border: 1px solid red;
+  /* border: 1px solid red; */
   flex: 1;
 }
